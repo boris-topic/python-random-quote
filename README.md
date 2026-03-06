@@ -1,17 +1,35 @@
-# Let's Write a Python Quote Bot!
+# Aktivitet-checklista med tidtagning
 
-This repository will get you started with building a quote bot in Python. It's meant to be used along with the [Learning Lab](https://lab.github.com) intro to Python.
+Det här projektet är nu ett enkelt CLI-verktyg i Python för att planera dagen med aktiviteter,
+markera vad som är klart och mäta tid per aktivitet.
 
-When complete, you'll be able to grab random quotes from the command line, like this:
+## Funktioner
 
-> **$** python get-quote.py
-> 
-> Keep it logically awesome
-> 
-> **$** python get-quote.py
-> 
-> Speak like a human
+- Skapa aktiviteter i en checklista.
+- Starta/stoppa tidtagning per aktivitet.
+- Markera aktiviteter som klara/inte klara.
+- Se total sammanfattning av tid och status.
+- Data sparas i `activities.json` i samma mapp.
 
-## Start the Tutorial
+## Exempel
 
-You can find your next step in [this repo's issues](../../issues/)!
+```bash
+python get-quote.py add "Skriva rapport"
+python get-quote.py add "Träna"
+python get-quote.py start 1
+python get-quote.py stop 1
+python get-quote.py check 1
+python get-quote.py list
+python get-quote.py summary
+```
+
+## Kommandon
+
+- `add "titel"` – skapar en aktivitet.
+- `list` – visar checklistan.
+- `start <id>` – startar tidtagning.
+- `stop <id>` – stoppar tidtagning.
+- `check <id>` – markerar aktivitet som klar.
+- `uncheck <id>` – tar bort klar-markering.
+- `remove <id>` – tar bort aktivitet.
+- `summary` – visar total statistik.
